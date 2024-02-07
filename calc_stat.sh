@@ -25,7 +25,7 @@ if [[ $course_found == false ]]; then
     exit 1
 fi
 
-directory_name="044101_stat"
+directory_name="$1_stat"
 
 if [[ -d $directory_name ]]; then
     rm -rf "$directory_name"
