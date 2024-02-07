@@ -9,7 +9,7 @@ fi
 course_found=false
 
 # Iterate over all files in the current directory
-for file in "$PWD/$1".*; do
+for file in "./$1".*; do
     # Check if the file matches the specified pattern
     if [[ -e "$file" ]]; then
         #arg $1 not necessary contain the grades' file name 
