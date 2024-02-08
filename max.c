@@ -44,7 +44,7 @@ void operate(FILE *f){
             fprintf(stderr, "Error at line %d: grade %d invalid", students_num, grade);
             exit (1);
         }
-        if (max_grade > grade){
+        if (max_grade < grade){
             max_grade = grade;
         }
         students_num++;
