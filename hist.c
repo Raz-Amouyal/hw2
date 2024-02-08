@@ -44,7 +44,7 @@ void operate(int *bins){
     }
     pace = 100.0 / nbins;
     for (int i = 0; i < nbins ; ++i) {
-        printf("%.0lf-%.0lf\t%d\n",
+        printf("%.0lf-%.0lf    %d\n",
                i * pace,
                (i < nbins-1) ? ((i+1) * pace -1) : MAXGRADE,
                bins[i]);
