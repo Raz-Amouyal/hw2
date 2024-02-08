@@ -36,4 +36,4 @@ min=$(./min.exe "$stats")
 
 max=$(./max.exe "$stats")
 
-echo -e "$mean\t$median\t$min\t$max" > ./"$directory_name"/statistics.txt
+echo -e "$mean    $median    $min    $max" > ./"$directory_name"/statistics.txt
