@@ -44,7 +44,7 @@ void operate(FILE *f){
             fprintf(stderr, "Error at line %d: grade %d invalid", students_num, grade);
             exit (1);
         }
-        if (min_grade < grade){
+        if (min_grade > grade){
             min_grade = grade;
 
         }
