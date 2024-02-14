@@ -64,7 +64,7 @@ void operate(FILE *f){
     for (int i = 0; i < NUMGRADES ; ++i) {
         count += hist[i];
         if (count >= median_number){
-            printf("%d", grade);
+            printf("%d", i);
             break;
         }
     }
