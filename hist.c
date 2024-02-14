@@ -58,7 +58,7 @@ void parse_arg(int argc, char **argv){
         if (!strcmp(argv[i], "-")){
             f = stdin;
 	    c++;
-        } else if (!strcmp(argv[i], "-n_bins")){
+        } else if (!strcmp(argv[i], "-nbins")){
             nbins = i<argc-1 ? atoi(argv[i+1]) : 10;
             i++;
         } else if(!c) {
