@@ -30,6 +30,7 @@ void operate(int *bins){
     int grade;
     int retval;
     double pace;
+    int line = 1;
 
     while (1){
         retval = fscanf(f, "%d", &grade);
@@ -38,9 +39,14 @@ void operate(int *bins){
         } else if (retval != 1) {
             fprintf(stderr, "Error not a number");
             exit(1);
+        } else if (grade > MAXGRADE || grade < MINGRADE) {
+            fprintf(stderr, "Error at line %d: grade %d invalid", line, grade);
+            exit(1);
         }
-        int n = grade / (100 / nbins);
+        int n = (grade != 100) ? grade / (100 / nbins) : nbins -1;
+	
         bins[n]++;
+	line++;
     }
     pace = 100.0 / nbins;
     for (int i = 0; i < nbins ; ++i) {
