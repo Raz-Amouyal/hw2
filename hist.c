@@ -53,13 +53,15 @@ void operate(int *bins){
 
 void parse_arg(int argc, char **argv){
     f = stdin;
+    int c=0;
     for (int i = 1; i < argc; ++i) {
         if (!strcmp(argv[i], "-")){
             f = stdin;
+	    c++;
         } else if (!strcmp(argv[i], "-n_bins")){
             nbins = i<argc-1 ? atoi(argv[i+1]) : 10;
             i++;
-        } else {
+        } else if(!c) {
             f = fopen(argv[i], "r");
         }
     }
